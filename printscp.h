@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014-2017 Softus Inc.
+ * Copyright (C) 2014-2018 Softus Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -29,6 +29,7 @@
 #define DEFAULT_TIMEOUT      30
 #define DEFAULT_OCR_LANG     "eng"
 #define DEFAULT_CONTENT_TYPE "application/xml"
+#define DEFAULT_CHARSET      "UTF-8"
 
 #ifdef UNICODE
 #define DCMTK_UNICODE_BUG_WORKAROUND
@@ -268,7 +269,7 @@ private:
     bool debugUpstream;
 
     // Regular expression to remove non printable symbols
-    // For example, [^a-z,A-Z, .] will remove everything
+    // For example, [^a-zA-Z .] will remove everything
     // except latin chars, the dot and the space.
     // "W PE=RAE=RAE=s-HK<©" will be "W PERAERAEsHK"
     //

@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (C) 2014-2017 Softus Inc.
+ * Copyright (C) 2014-2018 Softus Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -223,7 +223,7 @@ QString translateToCyrillic(const QString& str)
         case 'x':
             ret.append(L'к').append(L'с');
             break;
-        case 'с':
+        case 'c':
             ret.append(next(str, i) == 'h'? ++i, L'ч': L'к'); // Английская 'c' без 'h' не должна встречаться.
             break;
         case 'y':
